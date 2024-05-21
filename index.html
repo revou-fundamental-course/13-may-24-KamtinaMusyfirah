@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Nilai Segitiga</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">Segitiga<span>▲</span></a>
+        <nav class="navbar">
+            <a href="#hitung_luas">Luas Segitiga</a>
+            <a href="#hitung_keliling">Keliling Segitiga</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>WELCOME TO</h3>
+            <span>Katik (Kalkulator Matematika)</span>
+            <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling segitiga</p>
+            <a href="#hitung_luas" class="btn">Mulai Menghitung</a>
+        </div>
+    </section>
+
+    <section class="luas" id="luas">
+        <h1 class="heading"><span>LUAS</span> SEGITIGA</h1>
+        <div class="row">
+            <div class="gambar-segitiga">
+                <img src="segitiga.png" alt="Gambar Segitiga">
+            </div>
+            <div class="content">
+                <h3>Rumus Luas Segitiga</h3>
+                <p class="rumus">L = <sup>1</sup>/<sub>2</sub> x a x t</p>
+                <p>Dimana:</p>
+                <p>L = Luas</p>
+                <p>a = panjang alas</p>
+                <p>t = tinggi</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hitung_luas" id="hitung_luas">
+        <h1 class="heading"><span>HITUNG LUAS</span> SEGITIGA</h1>
+        <form id="triangleForm">
+            <input type="number" id="alas" placeholder="Masukkan panjang alas Segitiga" required>
+            <input type="number" id="tinggi" placeholder="Masukkan tinggi segitiga" required>
+            
+            <button type="button" onclick="calculateLuas()">Hitung</button>
+        </form>
+        <div id="resultsLuas" hidden>
+            <p id="calculationStepsLuas"></p>
+        </div>
+    </section>
+
+    <section class="keliling" id="keliling">
+        <h1 class="heading"><span>KELILING</span> SEGITIGA</h1>
+        <div class="row">
+            <div class="gambar-segitiga">
+                <img src="keliling.png" alt="Gambar Segitiga">
+            </div>
+            <div class="content">
+                <h3>Rumus Keliling Segitiga</h3>
+                <p class="rumus">K = s + s + s
+                <p>Dimana:</p>
+                <p>s = sisi segitiga</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hitung_keliling" id="hitung_keliling">
+        <h1 class="heading"><span>HITUNG KELILING</span> SEGITIGA</h1>
+        <form id="triangleForm">
+            <input type="number" id="sisiA" placeholder="Masukkan sisi Segitiga" required>
+            <input type="number" id="sisiB" placeholder="Masukkan sisi segitiga" required>
+            <input type="number" id="sisiC" placeholder="Masukkan sisi segitiga" required>
+            
+            <button type="button" onclick="calculateKeliling()">Hitung</button>
+        </form>
+        <div id="resultsKeliling" hidden>
+            <p id="calculationStepsKeliling"></p>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
